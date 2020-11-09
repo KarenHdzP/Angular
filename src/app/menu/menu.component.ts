@@ -45,7 +45,6 @@ const DISHES: Dish[] = [
   }
   ];
 
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -54,7 +53,6 @@ const DISHES: Dish[] = [
 export class MenuComponent implements OnInit {
 
   dishes: Dish[] = DISHES;
-  selectedDish = DISHES[0];
 
   constructor() { }
 
