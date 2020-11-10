@@ -7,12 +7,12 @@
       <mat-card>
         <mat-card-header>
           <mat-card-title>
-            <h3>{{selectedDish.name | uppercase}}</h3>
+            <h3>{{dish.name | uppercase}}</h3>
           </mat-card-title>
         </mat-card-header>
         <img mat-card-image src={{dish.image}} alt={{dish.name}}>
         <mat-card-content>
-          <p>{{selectedDish.description}}
+          <p>{{dish.description}}
           </p>
         </mat-card-content>
         <mat-card-actions>
@@ -29,10 +29,10 @@
         </mat-card-header>
         <mat-card-content>
           <mat-list>
-            <mat-list-item *ngFor="let object of objects">
-              <p matLine><span> {{object.comment}}</span></p>
-              <p matLine><span>{{object.rating}} Starts</span></p>
-              <p matLine> --{{object.author}} {{object.date | date}}</p>
+            <mat-list-item *ngFor="let comment of dish.comments">
+              <p matLine><span> {{comment.comment}}</span></p>
+              <p matLine><span>{{comment.rating}} Starts</span></p>
+              <p matLine> --{{comment.author}} {{comment.date | date}}</p>
             </mat-list-item>
           </mat-list>
         </mat-card-content>
